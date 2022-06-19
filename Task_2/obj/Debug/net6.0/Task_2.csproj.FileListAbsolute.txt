@@ -1,0 +1,15 @@
+/Users/eruslanovandrey/17.06 - 22.07 work project/Task_2/obj/Debug/net6.0/Task_2.csproj.AssemblyReference.cache
+/Users/eruslanovandrey/17.06 - 22.07 work project/Task_2/obj/Debug/net6.0/Task_2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/eruslanovandrey/17.06 - 22.07 work project/Task_2/obj/Debug/net6.0/Task_2.AssemblyInfoInputs.cache
+/Users/eruslanovandrey/17.06 - 22.07 work project/Task_2/obj/Debug/net6.0/Task_2.AssemblyInfo.cs
+/Users/eruslanovandrey/17.06 - 22.07 work project/Task_2/obj/Debug/net6.0/Task_2.csproj.CoreCompileInputs.cache
+/Users/eruslanovandrey/17.06 - 22.07 work project/Task_2/bin/Debug/net6.0/Task_2
+/Users/eruslanovandrey/17.06 - 22.07 work project/Task_2/bin/Debug/net6.0/Task_2.deps.json
+/Users/eruslanovandrey/17.06 - 22.07 work project/Task_2/bin/Debug/net6.0/Task_2.runtimeconfig.json
+/Users/eruslanovandrey/17.06 - 22.07 work project/Task_2/bin/Debug/net6.0/Task_2.dll
+/Users/eruslanovandrey/17.06 - 22.07 work project/Task_2/bin/Debug/net6.0/Task_2.pdb
+/Users/eruslanovandrey/17.06 - 22.07 work project/Task_2/obj/Debug/net6.0/Task_2.dll
+/Users/eruslanovandrey/17.06 - 22.07 work project/Task_2/obj/Debug/net6.0/refint/Task_2.dll
+/Users/eruslanovandrey/17.06 - 22.07 work project/Task_2/obj/Debug/net6.0/Task_2.pdb
+/Users/eruslanovandrey/17.06 - 22.07 work project/Task_2/obj/Debug/net6.0/Task_2.genruntimeconfig.cache
+/Users/eruslanovandrey/17.06 - 22.07 work project/Task_2/obj/Debug/net6.0/ref/Task_2.dll
