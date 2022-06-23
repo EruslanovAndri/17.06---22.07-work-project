@@ -11,16 +11,22 @@ int b = Convert.ToInt32(Console.ReadLine());
 
 
 
-if (a > b) 
+
+
+if (a > b)  
 {
-     Console.WriteLine("Первое число больше второго");
+     Console.WriteLine($"Первое число больше второго {a} ");
    
 } 
 else 
 {
-     Console.WriteLine("Второе число больше первого"); // Не могу понять как дописать программу, чтобы она выводила на экран не текст а цифры.
-     
-
+     Console.WriteLine($"Второе число больше первого {b} "); 
      
 }
 
+
+// Console.WriteLine("Введите целое число");
+// int num = Convert.ToInt32(Console.ReadLine()); // Convert помогает конвертировать строковый тип данных в численный 
+// //int num = 5;
+// int square = num * num;
+// Console.WriteLine($"Квадрат числа {num} = {square}"); // $ - это интерполяция помогает выводить значение переменных
