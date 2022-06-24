@@ -8,7 +8,7 @@ int ShowSecDigit(int num)
 {
     int firstNumber = num / 100;
     int secondNumber = num / 10;
-    int thirdDigit = num % 10;
+    //int thirdDigit = num % 10;
     int result = secondNumber % 10;
     return result;
 }
