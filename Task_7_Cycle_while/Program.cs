@@ -23,7 +23,7 @@ int y = xb;
 
 int count = 0;
 
-while (count < 10);
+while (count < 1000)
 {
      
      int what = new Random().Next(1, 3); // полуинтервал от  min to max-1 0, 1, 2.
