@@ -5,7 +5,7 @@
 // 12 -> 2
 // 85 -> 8
 
-int rndNum = new Random().Next(10, 100);
+
 // Console.WriteLine($"Случайное число из отрезка 10 - 99 => {rndNum}");
 // int firstDigit = rndNum / 10;
 // int secondDigit = rndNum % 10;
@@ -20,7 +20,7 @@ int rndNum = new Random().Next(10, 100);
 // {
 //     Console.WriteLine(str);
 // }
-
+int rndNum = new Random().Next(10, 100);
 int MaxDigit(int num)
 {
     int firstDigit = num / 10;
