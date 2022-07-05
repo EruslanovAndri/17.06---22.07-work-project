@@ -7,64 +7,38 @@
 // [1, 2, 3, 6, 2] -> 0
 // [10, 11, 12, 13, 14] -> 5
 
-
-int[] array = new int[123];
-var rnd = new Random();
-int index = 0;
-
-int [] CreateArray(int[] arr)
+int[] CreateArrayRndInt(int size)
 {
+    int[] array = new int[size];
+    var rnd = new Random();
+    int index = 0;
+
     while (index < array.Length)
     {
-        array[index] = rnd.Next(1, 1000);
+        array[index] = rnd.Next(0, 200);
+        Console.Write(array[index] + " ");
         index++;
+        
     }
     return array;
 }
-int[] arr = CreateArray(array);
-Console.WriteLine();
+int[] array1 = CreateArrayRndInt(5);
 
-int [] Find(int [] newArr)
+
+int FindNum(int[] arr)
 {
-    for (int i = 0; i < array.Length; i++)
+    int i = 0;
+    int count = 0;
+    while (i < arr.Length)
     {
-        while()
+        if (arr[i] >= 10 && arr[i] <= 99)
+            count = count + 1;
         i++;
+        
     }
+    return count;
 }
 
-// int[] CreateArrayRndInt(int size)
-// {
-//     int[] array = new int[size];
-//     var rnd = new Random();
-//     int index = 0;
-
-//     while (index < array.Length)
-//     {
-//         array[index] = rnd.Next(0, 200);
-//         Console.Write(array[index] + " ");
-//         index++;
-        
-//     }
-//     return array;
-// }
-// int[] array1 = CreateArrayRndInt(5);
-
-
-// int FindNum(int[] arr)
-// {
-//     int i = 0;
-//     int count = 0;
-//     while (i < arr.Length)
-//     {
-//         if (arr[i] >= 10 && arr[i] <= 99)
-//             count = count + 1;
-//         i++;
-        
-//     }
-//     return count;
-// }
-
-// int count1= FindNum(array1);
-// Console.WriteLine();
-// Console.WriteLine(count1);
+int count1= FindNum(array1);
+Console.WriteLine();
+Console.WriteLine(count1);
