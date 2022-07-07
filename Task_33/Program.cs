@@ -1,26 +1,31 @@
-﻿// Задача 33: Задайте массив. Напишите программу, которая
-// определяет, присутствует ли заданное число в массиве.
-// 4; массив [6, 7, 19, 345, 3] -> нет
-// 3; массив [6, 7, 19, 345, 3] -> да
-
+﻿// Task 33. Задайте массив, Напишите программу, которая определяет, 
+// присутствует ли число в массиве.
+// 4: массив [6,7,19,345,3] -> no.
+// 3; массив [6,7,17,345,3] -> yes.
+Console.WriteLine("Enter a number: ");
+int number = int.Parse(Console.ReadLine());
 int[] array = new int[5];
 var rnd = new Random();
 int index = 0;
 while (index < array.Length)
 {
-    array[index] = rnd.Next(-9, 10);
-    Console.Write($"{array[index]}  ");
+    array[index] = rnd.Next(0, 1000);
+    Console.Write($"{array[index]} ");
     index++;
 }
 Console.WriteLine();
-int[] Change(int[] arr)
+
+string CheckNumber(int[] arr, int num)
 {
-    int[] newArr = new int[arr.Length];
+    string res = "No";
     for (int i = 0; i < arr.Length; i++)
     {
-        newArr[i] = -arr[i];
-        Console.Write($"{newArr[i]}  ");   
+        if (arr[i] == num) res = "Yes";  
     }
-    return newArr;
+    return res;
 }
-int[] array1 = Change(array);
+
+string result = CheckNumber(array, number);
+Console.WriteLine(result);
+
+
