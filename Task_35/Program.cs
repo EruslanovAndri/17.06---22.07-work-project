@@ -18,10 +18,11 @@ int[] CreateArrayRndInt(int size)
         array[index] = rnd.Next(0, 200);
         Console.Write(array[index] + " ");
         index++;
-        
+
     }
     return array;
 }
+
 int[] array1 = CreateArrayRndInt(5);
 
 
@@ -34,11 +35,11 @@ int FindNum(int[] arr)
         if (arr[i] >= 10 && arr[i] <= 99)
             count = count + 1;
         i++;
-        
+
     }
     return count;
 }
 
-int count1= FindNum(array1);
+int count1 = FindNum(array1);
 Console.WriteLine();
 Console.WriteLine(count1);

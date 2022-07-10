@@ -42,6 +42,7 @@ void Reverse(int [] arr)
 
 int [] array = CreateArrayRndInt(5);
 PrintArray(array);
+
 Reverse(array);
 Console.WriteLine();
 PrintArray(array);
