@@ -13,6 +13,7 @@ while (index < array.Length)
     index++;
 }
 Console.WriteLine();
+
 int[] Change(int[] arr)
 {
     int[] newArr = new int[arr.Length];
