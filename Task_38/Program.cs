@@ -9,7 +9,7 @@ double[] CreateArrayRndDouble()
 
     while (index < array.Length)
     {
-        array[index] = rnd.NextDouble();
+        array[index] = rnd.NextDouble() * 100;
         index++;
     }
     return array;
@@ -37,7 +37,7 @@ double FindDifferenceBetweenMaxAndMinElements(double[] arr)
         if (maxElement <= arr[i])
         {
             maxElement = arr[i];
-            
+
         }
         else
         {
