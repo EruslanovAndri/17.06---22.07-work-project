@@ -18,8 +18,15 @@ double GetPointOfIntersection(int kc1, int kc2, int bc1, int bc2)
 {
     double res = Math.Sqrt(bc2 - bc1) / (kc1 - kc2);
     res = Math.Round(res, 2);
-    double result = Math.Sqrt(kc1 * res + bc1);
-    return result;
+    double result1 = Math.Sqrt(kc1 * res + bc1);
+    double res2 = Math.Sqrt(bc2 - bc1) / (kc1 - kc2);
+    res = Math.Round(res2, 2);
+    double result2 = Math.Sqrt(kc2 * res + bc2);
+    return  result1;
 }
+
+
 double result = GetPointOfIntersection(k1, k2, b1, b2);
 Console.WriteLine(result);
+
+// DO not work properly 
