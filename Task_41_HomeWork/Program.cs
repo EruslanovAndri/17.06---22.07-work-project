@@ -3,19 +3,28 @@
 // 0, 7, 8, -2, -2 -> 2
 // -1, -7, 567, 89, 223-> 3
 
-
-Console.WriteLine("Введите количество чисел:");
+Console.WriteLine("Программа определяет количество чисел больше нуля введенных пользователем.");
+Console.WriteLine();
+Console.Write("Введите количество чисел: ");
+Console.WriteLine();
+Console.Write("Введите числа: ");
 int countNumber = int.Parse(Console.ReadLine());
-int number = countNumber;
-int count = 0;
-for (int i = 0; i < countNumber; i++)
+
+void GetAmountNumbersAboveZero(int countNumber)
 {
-    number = int.Parse(Console.ReadLine());
-    if (number > 0)
+    int number = countNumber;
+    int count = 0;
+    for (int i = 0; i < countNumber; i++)
     {
-        count++;
+        number = int.Parse(Console.ReadLine());
+        if (number > 0)
+        {
+            count++;
+        }
     }
 }
-Console.WriteLine($"Количество чисел больше нуля = {count}");
+
+GetAmountNumbersAboveZero(countNumber);
+Console.WriteLine($"Количество чисел больше нуля = {countNumber}");
 
 // Work.
