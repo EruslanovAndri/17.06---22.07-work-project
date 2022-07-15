@@ -3,13 +3,13 @@
 
 double[] CreateArrayRndDouble()
 {
-    double[] array = new double[5];
+    double[] array = new double[4];
     var rnd = new Random();
     int index = 0;
 
     while (index < array.Length)
     {
-        array[index] = rnd.NextDouble() * 100;
+        array[index] = Math.Round(rnd.NextDouble(), 3) * 100;
         index++;
     }
     return array;
@@ -51,6 +51,7 @@ double FindDifferenceBetweenMaxAndMinElements(double[] arr)
 double[] array = CreateArrayRndDouble();
 PrintArray(array);
 double res = FindDifferenceBetweenMaxAndMinElements(array);
-Console.WriteLine(Math.Round(res, 3));
+Console.WriteLine();
+Console.WriteLine($"Разница между максимальным и минимальным элементом массива = {Math.Round(res, 3)}");
 
 // Work. But , don't found the way how to do Math.Round array.
