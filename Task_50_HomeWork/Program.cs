@@ -51,14 +51,14 @@ void PrintMatrix(int[,] arr)
 int FindElement(int[,] arr)
 {
     int res = 0;
+
     for (int i = 0; i < arr.GetLength(0); i++)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-
             if (i == num4 && j == num5)
             {
-                res = arr[i, j] = arr[i, j];   
+                res = arr[i, j] = arr[i, j];
             }
         }
     }
