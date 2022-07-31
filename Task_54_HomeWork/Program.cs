@@ -41,26 +41,44 @@ void PrintMatrix(int[,] arr)
         Console.WriteLine();
     }
 }
-
-int PutNumbersInARowFromMaxToMIn(int[,] array)
+ 
+int PutNumbersInARowFromMaxToMIn(int[,] arr)
 {
-    int temp = array[0, 0];
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < arr.GetLength(0); i++)
     {
-        int max = array[0, 0];
-        for (int j = 0; j < array.GetLength(1); j++)
+
+        for (int j = 0; j < arr.GetLength(1); j++)
         {
-            if (array[i, j] > max)
+            for (int k = i + 1; k < arr.GetLength(0); k++)
             {
-                max = array[i, j];
-                temp = max;
+                for (int m = j + 1; m < arr.GetLength(1); m++)
+                {
+                    if (arr[i, j] > arr[k, m])
+                    {
+                        int temp = arr[i, j];
+                        arr[i, j] = arr[k, m];
+                        arr[k, m] = temp;
+                        Console.Write(temp);
+                    }
+                    
+                }
+                
             }
+            
         }
+       
     }
-    return temp;
+    return  0;
+    
 }
 
 int[,] matrix = CreateMarix(num1, num2, 10, 100);
 PrintMatrix(matrix);
-int max = PutNumbersInARowFromMaxToMIn(matrix);
-Console.WriteLine(max);
+PutNumbersInARowFromMaxToMIn(matrix);
+int res = PutNumbersInARowFromMaxToMIn(matrix);
+Console.Write(res);
+
+
+
+
+
