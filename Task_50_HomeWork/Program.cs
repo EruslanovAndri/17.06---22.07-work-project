@@ -58,12 +58,17 @@ int FindElement(int[,] arr)
         {
             if (i == num4 && j == num5)
             {
-                res = arr[i, j] = arr[i, j];
+                res = arr[i, j];
+            }
+            else
+            {
+                Console.WriteLine($"No");
             }
         }
     }
     return res;
 }
+
 
 int[,] matrix = CreateMarix(num1, num2, minElement, maxElement);
 PrintMatrix(matrix);
