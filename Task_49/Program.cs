@@ -1,4 +1,4 @@
-﻿// Task 49. Задайте двумерный массив. Найдите элементы, у каторых оба индекса 
+﻿// Task 49. Задайте двумерный массив. Найдите элементы, у которых оба индекса 
 // чётные,и замените эти элементы на их квадраты.
 //1 4 7 2          1 4 7 2 
 //5 9 2 3          5 81 2 9
@@ -8,10 +8,8 @@ Console.WriteLine("Введите количество строк: ");
 int num1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите количество столбцов: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
-
 Console.WriteLine("Введите минимальный элемент: ");
 int minElement = Convert.ToInt32(Console.ReadLine());
-
 Console.WriteLine("Введите максимальный элемент: ");
 int maxElement = Convert.ToInt32(Console.ReadLine());
 
@@ -29,7 +27,6 @@ int[,] CreateMatrixRndInt(int m, int n, int min, int max)
     }
     return array;
 }
-
 
 void PrintMatrix(int[,] arr)
 {
