@@ -44,12 +44,12 @@ void PrintMatrix(int[,] arr)
 
 
 void ChangeLineAndColumns(int[,] arr, int[,] newArr)
-{  
+{
     for (int i = 0; i < arr.GetLength(0); i++)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-            newArr[j,i] = arr[i,j];
+            newArr[j, i] = arr[i, j];
         }
     }
 }
@@ -58,8 +58,8 @@ void ChangeLineAndColumns(int[,] arr, int[,] newArr)
 int[,] matrix = CreateMatrixRndInt(num1, num2, minElement, maxElement);
 Console.WriteLine();
 PrintMatrix(matrix);
-int[,] resultMatrix = new int[matrix.GetLength(0),matrix.GetLength(1)]; 
-if(num1 == num2) ChangeLineAndColumns(matrix,resultMatrix);
+int[,] resultMatrix = new int[matrix.GetLength(0), matrix.GetLength(1)];
+if (num1 == num2) ChangeLineAndColumns(matrix, resultMatrix);
 else Console.WriteLine("Невозможно заменить строки на столбцы.");
 Console.WriteLine();
 PrintMatrix(resultMatrix);
