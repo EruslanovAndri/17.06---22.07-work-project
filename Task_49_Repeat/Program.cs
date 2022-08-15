@@ -45,7 +45,7 @@ void PrintMatrix(int[,] arr)
         Console.WriteLine();
     }
 }
-int[,] ChangeEvenIndex(int[,] arr)
+void ChangeEvenIndex(int[,] arr)
 {
     for (int i = 0; i < arr.GetLength(0); i++)
     {
@@ -57,12 +57,12 @@ int[,] ChangeEvenIndex(int[,] arr)
             }
         }
     }
-    return arr;
+    
 }
 int[,] matrix = CreatMatrix(row, colomns, minElement, maxElement);
 PrintMatrix(matrix);
 Console.WriteLine();
-int[,] resultMatrix = ChangeEvenIndex(matrix);
-PrintMatrix(resultMatrix);
+ChangeEvenIndex(matrix);
+PrintMatrix(matrix);
 
 // Work
