@@ -1,4 +1,4 @@
-﻿// Задача 54: Задайте двумерный массив. Напишите программу, 
+﻿// Задача 54: // Задача 54: Задайте двумерный массив. Напишите программу, 
 // которая упорядочит по убыванию элементы каждой строки двумерного массива.
 // Например, задан массив:
 // 1 4 7 2
@@ -8,6 +8,8 @@
 // 7 4 2 1
 // 9 5 3 2
 // 8 4 4 2
+
+Console.Clear();
 
 Console.WriteLine("Введите количество строк:");
 int num1 = Convert.ToInt32(Console.ReadLine());
@@ -41,42 +43,44 @@ void PrintMatrix(int[,] arr)
         Console.WriteLine();
     }
 }
- 
-int PutNumbersInARowFromMaxToMIn(int[,] arr)
-{
-    for (int i = 0; i < arr.GetLength(0); i++)
-    {
 
-        for (int j = 0; j < arr.GetLength(1); j++)
+void PutNumbersInARowFromMaxToMIn(int[,] arr)
+{
+    for (int k = 0; k < arr.GetLength(0); k++)
+    {
+        for (int i = 0; i < arr.GetLength(1); i++)
         {
-            for (int k = i + 1; k < arr.GetLength(0); k++)
+            int maxPos = i;
+
+            for (int j = i; j < arr.GetLength(1); j++)
             {
-                for (int m = j + 1; m < arr.GetLength(1); m++)
+                if (arr[k, j] > arr[k, maxPos])
                 {
-                    if (arr[i, j] > arr[k, m])
-                    {
-                        int temp = arr[i, j];
-                        arr[i, j] = arr[k, m];
-                        arr[k, m] = temp;
-                        Console.Write(temp);
-                    }
-                    
+                    maxPos = j;
                 }
-                
             }
-            
+            int temp = arr[k, i];
+            arr[k, i] = arr[k, maxPos];
+            arr[k, maxPos] = temp;
         }
-       
     }
-    return  0;
-    
 }
+
+
 
 int[,] matrix = CreateMarix(num1, num2, 10, 100);
 PrintMatrix(matrix);
 PutNumbersInARowFromMaxToMIn(matrix);
-int res = PutNumbersInARowFromMaxToMIn(matrix);
-Console.Write(res);
+Console.WriteLine();
+PrintMatrix(matrix);
+
+
+
+/// Work 
+
+
+
+
 
 
 
