@@ -1,15 +1,19 @@
 ﻿// Задача 58: Задайте две матрицы. Напишите программу, 
 // которая будет находить произведение двух матриц
 
-Console.WriteLine("Введите количество строк для матрицы А:");
-int num1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите количество столбцов для матрицы А:");
-int num2 = Convert.ToInt32(Console.ReadLine());
+Console.Clear();
+Console.WriteLine("Введите кол-во строк первой матрицы: ");
+int rowFirstMatrix = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите кол-во столбцов первой матрицы: ");
+int colomnsFirstMatrix = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите кол-во строк второй матрицы: ");
+int rowSecondMatrix = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите кол-во столбцов второй матрицы: ");
+int colomnsSecondMatrix = Convert.ToInt32(Console.ReadLine());
 
-
-int[,] CreateMarixA(int m, int n, int min, int max)
+int[,] CreateFirstMarix(int rowFirstMatrix, int colomnsFirstMatrix, int min, int max)
 {
-    int[,] array = new int[m, n];
+    int[,] array = new int[rowFirstMatrix, colomnsFirstMatrix];
     var rnd = new Random();
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -21,34 +25,23 @@ int[,] CreateMarixA(int m, int n, int min, int max)
     return array;
 }
 
-void PrintMatrixA(int[,] arr)
+void PrintFirstMatrix(int[,] arrFirst)
 {
-    for (int i = 0; i < arr.GetLength(0); i++)
+    for (int i = 0; i < arrFirst.GetLength(0); i++)
     {
-        for (int j = 0; j < arr.GetLength(1); j++)
+        for (int j = 0; j < arrFirst.GetLength(1); j++)
         {
             if (j == 0) Console.Write("[");
-            if (j < arr.GetLength(1) - 1) Console.Write(arr[i, j] + ",");
-            else Console.Write(arr[i, j] + "]");
+            if (j < arrFirst.GetLength(1) - 1) Console.Write(arrFirst[i, j] + ",");
+            else Console.Write(arrFirst[i, j] + "]");
         }
         Console.WriteLine();
     }
 }
 
-int[,] matrixA = CreateMarixA(num1, num2, 10, 100);
-
-
-
-Console.WriteLine("Введите количество строк для матрицы В:");
-int num3 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите количество столбцов для матрицы В:");
-int num4 = Convert.ToInt32(Console.ReadLine());
-
-int[,] matrixB = CreateMarixB(num3, num4, 10, 100);
-
-int[,] CreateMarixB(int m, int n, int min, int max)
+int[,] CreateSecondMarix(int rowSecondMatrix, int colomnsSecondMatrix, int min, int max)
 {
-    int[,] array = new int[m, n];
+    int[,] array = new int[rowSecondMatrix, colomnsSecondMatrix];
     var rnd = new Random();
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -60,38 +53,46 @@ int[,] CreateMarixB(int m, int n, int min, int max)
     return array;
 }
 
-
-void PrintMatrixB(int[,] arr)
+void PrintSecondMatrix(int[,] arrSecond)
 {
-    for (int i = 0; i < arr.GetLength(0); i++)
+    for (int i = 0; i < arrSecond.GetLength(0); i++)
     {
-        for (int j = 0; j < arr.GetLength(1); j++)
+        for (int j = 0; j < arrSecond.GetLength(1); j++)
         {
             if (j == 0) Console.Write("[");
-            if (j < arr.GetLength(1) - 1) Console.Write(arr[i, j] + ",");
-            else Console.Write(arr[i, j] + "]");
+            if (j < arrSecond.GetLength(1) - 1) Console.Write(arrSecond[i, j] + ",");
+            else Console.Write(arrSecond[i, j] + "]");
         }
         Console.WriteLine();
     }
 }
 
-int MultiplicationTwoMatrix(int[,] matrixC)
+
+void MultipalTwoMatrix(int[,] firstMatrix, int[,] secondMatrix, int[,] thirdMatrix)
 {
-    int[,] result = 0;
-    for (int i = 0; i < matrixA.Length; i++)
+    for (int i = 0; i < thirdMatrix.GetLength(0); i++)
     {
-        for (int j = 0; j < matrixB.Length; j++)
+        for (int j = 0; j < thirdMatrix.GetLength(1); j++)
         {
-            result = matrixA[i, j] * matrixB[i, j] + matrixA[j + 1] * matrixB[i + 1];
+            int res = 0;
+            for (int k = 0; k < firstMatrix.GetLength(1); k++)
+            {
+                res += firstMatrix[i, k] * secondMatrix[k, j];
+            }
+            thirdMatrix[i, j] = res;
         }
     }
-    return result;
 }
+int[,] thirdMatrix = new int[rowFirstMatrix, colomnsSecondMatrix];
 
-
-
-PrintMatrixA(matrixA);
+int[,] first = CreateFirstMarix(rowFirstMatrix, colomnsFirstMatrix, 1, 10);
+Console.WriteLine($"\nПервая матрица");
+PrintFirstMatrix(first);
 Console.WriteLine();
-PrintMatrixB(matrixB);
-int newMatrix = MultiplicationTwoMatrix(matrixC);
-PrintMatrixA(newMatrix);
+int[,] second = CreateSecondMarix(rowSecondMatrix, colomnsSecondMatrix, 1, 10);
+Console.WriteLine($"\nВторая матрица");
+PrintSecondMatrix(second);
+Console.WriteLine($"\nПроизведение первой и второй матриц:");
+MultipalTwoMatrix(first, second, thirdMatrix);
+PrintFirstMatrix(thirdMatrix);
+
